@@ -1,0 +1,315 @@
+
+body{
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	background: linear-gradient(to bottom, #bea2e7 0%, #86b7e7 100%);
+	background: linear-gradient(to bottom, #0dbeff 0%, #00518f 100%);
+	background: linear-gradient(to bottom, #bdbdbd 0%, #00518f 100%);
+	font-family: "Roboto", "Helvetica", sans-serif;
+	font-size: 15px;
+	line-height: 1.2em;
+	letter-spacing: 0.5px;
+	box-sizing: border-box;
+	background: #24292e;
+}
+
+a{
+	text-decoration:none;
+	color:black;
+}
+
+a:hover{
+
+	
+}
+
+
+p{
+		margin: 10px 0px;
+}
+
+
+
+.body_tabs{
+
+
+overflow: auto;
+
+
+
+
+
+}
+
+.tabx_empty,
+.tabx_selected,
+.tabx{
+		display: inline-block;
+		background-color:#dddddd;
+		border: solid transparent 1px;
+		float:left;
+		padding: 10px 40px;
+		transition: 0.15s linear;
+}
+
+.tabx{
+
+
+}
+
+.tabx:hover{
+		background-color:#ee4d4d;
+		color:white;
+
+}
+
+.tabx_selected{
+
+	background-color:white;
+	border: solid #dddddd 1px;
+	border-bottom: solid transparent 1px;
+	border-top-left-radius:10px;
+}
+
+.tabx_empty{
+	background-color:white;
+	color:white;
+	display: block;
+	float: none;
+	border-bottom: solid #dddddd 1px;
+
+}
+
+
+.body_container_strip,
+.body_container_top,
+.body_container{
+
+
+	min-width: 350px;
+    max-width: 1000px;
+	margin: 0 auto;
+	box-sizing: border-box;
+	padding:30px;
+	background-color: #fafbfc;
+
+
+
+}
+
+
+.body_container_top{
+		padding-top:20px;
+		margin-top:20px;
+		border-top-left-radius:10px;
+		border-top-right-radius:10px;
+		border-bottom: solid #dddddd 1px;
+		padding-bottom: 10px;
+	background-color: #ccc;
+
+
+}
+
+.body_container_strip{
+	background-color: #111;
+		padding:10px;
+
+	
+}
+
+
+
+
+
+.tab_selected{
+		background-color:white;
+		color: black;
+		border: solid #dddddd 1px;
+		border-top: solid #ee4d4d 3px;
+		border-bottom: solid white 1px;
+
+		
+}
+
+.tab_unselected{
+	
+		background-color:#eeeeee;
+		border: solid #dddddd 1px;
+		color: #bbbbbb;
+		border-bottom: solid #dddddd 1px;
+		border-top: solid #bbbbbb 3px;
+		
+
+}
+
+.tab_empty{
+	
+	background-color:gray;
+	border: solid #dddddd 1px;
+
+
+
+
+}
+
+.tab_unselected:hover{
+			background-color:#ee4d4d;
+			color:white:
+}
+
+
+
+
+.body_content{
+	margin: auto;
+	text-align:center;
+	background:white;
+	
+	padding: 34px 0px;
+	
+	border-left: solid #cccccc 1px;
+	border-right: solid #cccccc 1px;
+}
+
+
+.body_content p{
+	text-align:left;
+	padding: 0px 20px;
+	
+}
+
+.bc_h1{
+	font-size:20px;
+}
+
+
+
+.body_footer{
+	border: solid #cccccc 1px;
+	border-top: solid transparent 1px;
+	padding: 10px;
+border-bottom-right-radius:10px;
+border-bottom-left-radius:10px;
+}
+
+
+.card_container{
+	border-radius: 10px;
+	width:390px;
+	background-color: white;
+	
+	font-family: "Roboto", "Helvetica", sans-serif;
+	font-size: 15px;
+	line-height: 1.2em;
+	letter-spacing: 0.5px;
+	
+	border: solid #BDBDBD 1px;
+	border-bottom: solid #BDBDBD 5px;
+	
+	display: inline-block;
+	margin: 15px 10px;
+	text-align:left;
+	overflow:hidden;
+
+}
+
+.card_container:hover{
+	border: solid #ee4d4d 1px;
+	transition: 0.15s linear;
+		box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2), 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.card_top{
+	padding: 1px 10px;
+	background-color: #ee4d4d;
+	background-color: #ddd;
+	color:#6a6a6a;
+	letter-spacing: 1px;
+	font-size: 18px;
+
+}
+
+.card_top p{
+	
+
+}
+
+
+.card_middle{
+	line-height: 1.4em;
+	padding: 0px 10px;
+	border-top: solid #cccccc 1px;
+}
+
+.card_middle a{
+	color: blue;
+}
+
+.card_bottom{
+	border-top: solid #cccccc 1px;
+	padding: 0px 10px;
+	
+	
+}
+
+.card_bottom p{
+	color: #a2a2a2;
+	font-size: 10px;
+	text-transform: uppercase;
+	margin-left: 0px;
+	
+}
+
+.card_bottom p::first-letter{
+		font-size: 12px;
+}
+
+.card_tag {
+	
+	margin: 0px 4px 2px 0px;
+	padding: 2px 6px;
+	background-color: #A5C2FF;
+	color: #f1f1f1;
+	border: solid #757575 1px;
+	font-weight: normal;
+	font-size: 75%;
+	border-radius: 7px;
+	
+}
+
+.card_thumbnail{
+	background: url(../img/projects/resturant/img2.png);
+    background-size: cover;
+	height:150px;
+		border-top: solid #ccc 1px;
+}
+
+.name_div{
+	font-size:40px;
+	text-align:center;
+	padding:30px;
+
+	-webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+	border: solid #transparent 1px;
+	margin: 0;
+	border-radius:10px;
+	letter-spacing: 1px;
+	color: #404040;
+	font-family: "Roboto Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+}
+
+footer{
+		margin-top: 20px;
+		background: #111;
+		
+		border: solid transparent 1px;
+		
+		border-top: solid #000 1px;
+		padding-bottom: 30px;
+	
+	
+}

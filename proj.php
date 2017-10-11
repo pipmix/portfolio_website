@@ -12,40 +12,40 @@
 		$selectedProject = $_GET['project'];
 		echo $SelectedProject;
 		
-		$q = "
+		$statment1 = $db->prepare('
 				SELECT id, name, url, thumb_url, description
 				FROM project 
-				WHERE project.name = '$selectedProject'
-		";
-		$projectQuery = $db->query($q);
-		$listProject = $projectQuery->fetchAll();
+				WHERE project.name = ?
+		');
+		$statment1->execute(array($selectedProject));
+		$listProject = $statment1->fetchAll();
 		
-		$q2 = "
+		
+		$statment2 = $db->prepare('
 			SELECT f.name
 			FROM project p 
 			INNER JOIN project_frameworks pf
 			ON pf.project_id = p.id
 			INNER JOIN frameworks f
 			ON f.id = pf.framework_id
-            WHERE p.name = '$selectedProject'
-		";
-		
-		$frameworkQuery = $db->query($q2);
-		$listFrameworks = $frameworkQuery->fetchAll();
-		
+            WHERE p.name = ?
+		');
+		$statment2->execute(array($selectedProject));
+		$listFrameworks = $statment2->fetchAll();
 		
 		
-		$q3 = "
+		
+		$statment3 = $db->prepare('
 			SELECT l.name
 			FROM project p 
 			INNER JOIN project_languages pl
 			ON pl.project_id = p.id
 			INNER JOIN languages l
 			ON l.id = pl.languages_id
-            WHERE p.name = '$selectedProject'
-		";
-		$languageQuery  = $db->query($q3);
-		$listLanguages = $languageQuery->fetchAll();
+            WHERE p.name = ?
+		');
+		$statment3->execute(array($selectedProject));
+		$listLanguages = $statment3->fetchAll();
 	}
 
 			
