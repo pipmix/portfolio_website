@@ -1,0 +1,270 @@
+
+$font-size-small: 12px
+$font-size-normal: 16px
+$font-size-medium: 24px
+$font-size-large: 30px
+$font-size-extra-large: 40px
+
+$color-primary-background: #f9fbfd
+$color-primary-border: #dddddd
+$color-primary-text: #000
+
+$color-secondary-background: #333333
+
+$color-nav-background: #bbb
+$color-nav-highlight: #ddd
+$color-nav-text: #eee
+
+$color-light-bg: rgba(238, 238, 238, 0.32)
+
+$color-new-button: #ffffff
+
+$color-link: #EBEFBF
+$color-nav-bar: #F87060
+
+$color-splash: #000000
+
+$color-root-background: #ffffff
+
+$color-header-background: #000
+
+$font-primary: 'Heebo', sans-serif
+
+$value-section-padding: 380px
+$value-content-padding: 40px
+
+$value-header-padding: 140px
+
+$num-font-size: 12
+
+$color-line-break: rgba(0,0,0,.04)
+
+$value-project-padding: 50px
+$value-project-padding2: 100px
+
+
+	
+*
+	margin: 0
+	padding: 0
+	box-sizing: border-box
+	text-rendering: optimizeLegibility
+	font-family: 'Open Sans',sans-serif
+	font-size: 14px
+	line-height: 1.8
+	word-spacing: 0.08em
+
+body
+	background-color: $color-primary-background
+	font-family: $font-primary
+	display: flex
+	min-height: 100vh
+	flex-direction: column
+	padding: 0
+	margin: 0
+	box-sizing: border-box
+	background-color: $color-root-background
+	margin: 0
+	padding: 0
+
+	
+.div, h1, h2, h3, h4
+	margin: 0
+	padding: 0 0
+	font-weight: inherit
+	font-style: inherit
+	font-size: 100%
+	font-family: inherit
+	vertical-align: baseline
+	
+h1
+	font-size: 2em
+	padding: 0 $value-content-padding
+	
+h2
+	font-size: 1.7em
+	
+header
+	width: 100%
+	padding: 20px $value-header-padding
+	line-height: 1
+	word-spacing: 0.08em
+	font-family: 'Open Sans',sans-serif
+	font-size: 1.2em
+	font-weight: 400
+	color: #fff
+	background: $color-header-background
+	border: 1px solid rgba(0,0,0,.03)
+	font-size: $font-size-medium
+	
+nav
+	margin-top: 30px
+	padding: 0 0
+	display: flex
+	align-items: stretch
+	justify-content: flex-start
+
+	
+main
+	background-color: #eee
+	
+
+
+
+
+
+	
+
+
+footer
+	width: 100%
+	background-color: $color-header-background
+	background-color: $color-nav-background
+	color: #fff
+	padding: 30px
+
+
+a
+	text-decoration: none
+
+	
+
+
+	
+
+.project-each
+	border: 1px solid #dddddd
+	border-radius: 2px
+	margin: 20px
+	border-bottom: solid #BDBDBD 5px
+	border-radius: 10px
+
+.project-category
+	font-size: $font-size-medium
+	background-color: #f9f9f9
+	padding: 0px 10px 
+	border: 1px solid transparent
+	border-bottom-color: #ddd
+
+.project-title
+	background-color: $color-splash
+	padding: 5px 25px
+	font-size: $font-size-large
+	color: #fff
+	
+.project-text-container	
+	padding: 10px $value-project-padding
+	
+
+.project-tag-container
+	padding: 10px $value-project-padding
+	
+.project-section-container
+	padding: 10px 10px
+	background-color: #f9f9f9
+	margin: 10px 15px
+	border: 1px solid #eee
+	border-radius: 2px
+
+span
+	padding: 0
+	margin: 0
+	
+.project-tag
+	display: inline
+	border: 1px solid #aaa
+	font-size: $font-size-small
+	background-color: #eee
+	padding: 2px 7px 
+	border-radius: 2px
+	margin: 1px
+
+
+.site-button
+	background-color: $color-new-button
+	border: 1px solid #dddddd 
+	width: 100px
+	padding: 15px 0px
+	font-size: $font-size-normal
+	text-align: center
+	border-left-color: transparent
+	color: #000
+	border-bottom-color: transparent
+	
+	
+.site-fill
+	flex-grow: 1
+	border-bottom-color: #dddddd 
+
+	
+.site-selected
+	border-bottom-color: transparent
+	
+	
+.site-unselected
+	border-bottom-color: #dddddd 
+	
+.site-left
+	border-left-color: #dddddd 
+	
+.header-1
+	font-size: $font-size-extra-large
+	margin: 10px 20px
+	
+.font-flex
+	display: flex
+	flex-direction: column
+	padding: 0px 10px
+	
+.font-title
+	font-size: $font-size-normal
+	margin-bottom: 5px
+
+.font-sub-title
+	font-size: $font-size-normal
+	
+.center-content
+	margin: 0px 40px
+	background-color: #eee
+	border: 1px solid transparent
+	
+.main-content-sub
+	padding: 0 0
+	margin: 0 auto
+	background-color: #f9fbfb
+	border: solid transparent 1px
+	
+.desc-no-top-border
+
+	
+.desc-no-bottom-border
+
+
+	
+.section-nav
+	display: flex
+	margin: 0 auto
+	
+	
+@media (min-width: 384px)
+	.main-content-sub
+		width: 384px
+		
+	.section-nav
+		width: 384px
+
+
+@media (min-width: 576px)
+	.main-content-sub
+		width: 576px
+		
+	.section-nav
+		width: 576px		
+
+		
+@media (min-width: 768px)
+	.main-content-sub
+		width: 768px
+
+	.section-nav
+		width: 768px

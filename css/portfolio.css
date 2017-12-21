@@ -1,0 +1,226 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font: 400 14px Arial, Helvetica, sans-serif;
+  letter-spacing: 0.5px;
+  line-height: 1.4;
+  word-spacing: 2px;
+  box-sizing: border-box; }
+
+a {
+  text-decoration: none; }
+
+a:link, a:visited {
+  color: lightskyblue;
+  text-decoration: none; }
+
+a:link:active, a:visited:active {
+  color: #fff; }
+
+nav {
+  background-color: #222; }
+
+.nav-container {
+  display: flex; }
+
+.font-sm {
+  font-size: 70%; }
+
+.font-normal {
+  font-size: 100%; }
+
+.font-medium {
+  font-size: 160%; }
+
+.font-large {
+  font-size: 220%; }
+
+.header-row {
+  background-color: #222;
+  color: #ddd;
+  display: flex;
+  padding: 0px 0px;
+  border-bottom: 1px solid #333; }
+
+.header-element {
+  padding: 10px 0px; }
+
+.header-button {
+  width: 100px; }
+
+.header-right {
+  flex-grow: 1; }
+
+.header-button-main {
+  width: 150px;
+  border-right: 1px solid #333;
+  text-align: center; }
+
+.header-left {
+  border-left: 1px solid #333; }
+
+.header-selected {
+  background-color: #33ad3b; }
+
+.header-deselected {
+  transition: background 0.2s ease, color 0.2s ease; }
+
+.header-deselected:hover {
+  background: #555;
+  color: #fff; }
+
+.table-container {
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border: 1px solid #ccc;
+  border-radius: 3px; }
+
+.content-container {
+  background-color: #f4f4f4;
+  border: 1px solid #ccc;
+  margin: 20px 0px;
+  padding: 12px 24px;
+  border-radius: 3px;
+  color: rgba(0, 0, 0, 0.54); }
+
+.table-grid {
+  overflow: auto;
+  max-height: 500px;
+  display: block;
+  border: 3px solid #ccc;
+  border-radius: 3px;
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.24), 0 0 2px rgba(0, 0, 0, 0.12);
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+  margin-top: 10px; }
+
+.table-row {
+  display: flex;
+  border: 1px solid transparent;
+  border-bottom: 1px solid #dedede;
+  min-height: 48px;
+  padding: 0 24px;
+  background-color: #f8f8f8;
+  color: #444;
+  align-items: center;
+  justify-content: flex-start; }
+
+.table-cell {
+  flex-grow: 1;
+  padding: 10px 5px; }
+
+.table-head {
+  color: rgba(0, 0, 0, 0.54);
+  background: rgba(0, 0, 0, 0.03);
+  vertical-align: center;
+  align-self: left; }
+
+.table-left {
+  width: 150px;
+  flex-grow: 0;
+  flex-shrink: 0; }
+
+.table-tag {
+  display: inline;
+  border: 1px solid #aaa;
+  font-size: 80%;
+  background-color: #efefef;
+  color: #666;
+  padding: 7px 7px;
+  border-radius: 4px;
+  margin: 1px; }
+
+footer {
+  background-color: #ddd; }
+
+main {
+  background-color: #fff;
+  flex-grow: 1;
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  justify-content: stretch; }
+
+.nav-button {
+  width: 100px;
+  border: 1px solid #ff6a00;
+  text-align: center;
+  padding: 10px 0;
+  margin-right: 5px;
+  background-color: slategray;
+  color: #fff; }
+
+.section-container {
+  width: 500px;
+  height: 100%;
+  margin: auto auto;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; }
+
+.section-container-2 {
+  border: 1px solid #ccc;
+  border-top: 1px solid transparent;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid transparent;
+  align-items: stretch;
+  flex-grow: 1; }
+
+.item-container {
+  display: flex;
+  flex-wrap: wrap; }
+
+.item-text {
+  border: 1px solid #ccc;
+  margin: 2px;
+  padding: 4px;
+  flex: 0 0 1; }
+
+.item-content {
+  border: 1px solid #ccc;
+  margin: 2px;
+  padding: 4px;
+  flex: 0 0 1; }
+
+.item-description {
+  width: 100%; }
+
+.footer-row {
+  display: flex;
+  padding: 20px;
+  flex-direction: column; }
+
+.footer-link {
+  padding: 5px; }
+
+.footer-top {
+  border: 1px solid #aaa;
+  border-top-color: transparent;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  background-color: #eee;
+  border-bottom: solid #BDBDBD 5px; }
+
+.div-shadow {
+  border-bottom: solid #BDBDBD 5px; }
+
+@media (min-width: 384px) {
+  .section-container {
+    width: 384px; } }
+@media (min-width: 576px) {
+  .section-container {
+    width: 576px; } }
+@media (min-width: 768px) {
+  .section-container {
+    width: 968px; } }
+
+/*# sourceMappingURL=portfolio.css.map */

@@ -2,7 +2,7 @@
 
 
 	function GetDbContext(){
-		return new PDO('mysql:host=localhost;dbname=projects;charset=utf8', '' , '');
+		return new PDO('mysql:host=localhost;dbname=projects;charset=utf8', 'root' , 'LinXX52');
 	}
 
 	function PrintTest(){
@@ -12,7 +12,7 @@
 	function PrintSelectedProject($selectedProject){
 		$db = GetDbContext();
 		$statment1 = $db->prepare('
-				SELECT id, name, url, thumb_url, description
+				SELECT id, name, url, purpose, features, git_url, show, project_url
 				FROM project 
 				WHERE project.name = ?
 		');
@@ -88,7 +88,7 @@
 			$results = $db->query("SELECT * FROM project");
 		
 			$statment1 = $db->prepare('
-				SELECT id, name, url, thumb_url, description
+				SELECT id, name, url, purpose, features, git_url, show, project_url
 				FROM project 
 				WHERE project.name = ?
 			');
@@ -118,37 +118,59 @@
 			exit;
 		}
 		
-		foreach ( $results as $p){
 
-				print '<div class="display_item_container">'."\n";
-					print '<div class="project_item_thumb">'."\n";
-						print '<img alt="'.$p["name"].' thumbnail" src="img/projects/thumb/'.$p["thumb_url"].'" width="200" height="200">'."\n";
-					print '</div>'."\n";
-					print '<div class="project_item_text">'."\n";
-						print '<div class="text_item_title">'.$p["name"].'</div>'."\n";
-						print '<div class="text_item_desc">'."\n".$p["description"]."\n".'</div>'."\n";
-						print '<div class="text_item_tags">'."\n";
-							print '<div class="project_tags_catagory">'."\n";
-								print 'Frameworks:'."\n";
-								foreach ($listframeworks as $fw){
-									if ($p["name"] == $fw[0]){
-										print '<span class = "card_tag">'.$fw[1].'</span>'."\n";
+		foreach ( $results as $p){
+			if ($p["show"] == 1){
+				print '<div class="table-grid" role="grid">'."\n";
+
+						
+						print '<div class="table-row table-head font-medium">'.$p["name"].'</div>'."\n";
+						
+						print '<div class="table-row">';
+							print '<div class="table-cell table-left">Purpose:</div>';
+							print '<div class="table-cell">'.$p["purpose"].'</div>';
+						print '</div>'."\n";
+						
+						
+						
+						$str2 = str_replace( '\n', '<br />', $p["features"]); 
+						print '<div class="table-row">';
+							print '<div class="table-cell table-left">Features:</div>';
+							print '<div class="table-cell">'.$str2.'</div>';
+						print '</div>'."\n";
+						
+						
+						print '<div class="table-row">';
+							print '<div class="table-cell table-left">Github:</div>';
+							print '<div class="table-cell">'.'<a href="https://'.$p["git_url"].'" target="_self">'.$p["git_url"].'</div>'.'</a>'."\n";
+						print '</div>'."\n";
+						
+						print '<div class="table-row">';
+							print '<div class="table-cell table-left">Frameworks:</div>';
+							print '<div class="table-cell table-tag-container">';
+									foreach ($listframeworks as $fw){
+										if ($p["name"] == $fw[0]){
+											print '<div class = "table-tag">'.$fw[1].'</div>'."\n";
+										}
 									}
-								}
-							print '</div>'."\n";
-							print '<div class="project_tags_catagory">'."\n";
-								print 'Languages: '."\n";
-								foreach ($listlanguages as $fw){
-									if ($p["name"] == $fw[0]){
-										print '<span class="card_tag">'.$fw[1].'</span>'."\n";
-									}
-								}
 							print '</div>'."\n";
 						print '</div>'."\n";
-					print '</div>'."\n";
-				print '</div>'."\n";
+						
+						print '<div class="table-row">';
+							print '<div class="table-cell table-left">Languages:</div>';
+							print '<div class="table-cell table-tag-container">'."\n";
+									foreach ($listlanguages as $fw){
+										if ($p["name"] == $fw[0]){
+											print '<div class="table-tag">'.$fw[1].'</div>'."\n";
+										}
+									}
+							print '</div>';
+						print '</div>'."\n";
 
-			print '<a href="/projects/'.$p["url"].'" target="_self">'.'</a>'."\n";
+				print '</div>';
+
+				
+			}
 		}
 		
 	}
